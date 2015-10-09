@@ -31,11 +31,12 @@ html{
 }
 
 table{
-  text-align: center;
-table-layout: fixed;
+    text-align: center;
+    table-layout: fixed;
     width: 300px;
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
+
 #menu div {
 	width: 33.3%;
 	float: left;
