@@ -24,12 +24,10 @@ html{
 	color: white;
 }
 #footer{
-  width: 100%;
   background-color: black;
   color: white;
-  position: fixed;
+  position: relative;
   bottom:0;
-  width: 100%;
 }
 
 table{
@@ -52,6 +50,7 @@ background-color: black;
 	color: black;
     font-size: large;
     padding: 15px;
+    padding-bottom: 400px;
 }
 
 #container{
