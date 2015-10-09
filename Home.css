@@ -49,8 +49,9 @@ background-color: black;
 }
 #middle{
 	vertical-align: center;
-	color: white;
-  font-size: large;
+	color: black;
+    font-size: large;
+    padding: 15px;
 }
 
 #container{
@@ -58,6 +59,7 @@ background-color: black;
 	margin: 10px auto;
     max-width: 60em;
     min-width: 60em;
+    background-color: #D3D3D3;
 }
 .menu{
 		color:white;
@@ -86,7 +88,7 @@ background-color: black;
 }
 
 /* display of quote author (alternatively use a class on the element following the blockquote) */
-.example-right + p {margin:30px 0 2em 85px; font-style:italic;}
+.example-right + p {margin:15px 0px 2em 85px; font-style:italic;}
 
 /* creates the triangle */
 .example-right:after {
