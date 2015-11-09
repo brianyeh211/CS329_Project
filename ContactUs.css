@@ -1,9 +1,10 @@
 html{
 	background-color: #32373c;
+
 }
 #logo{
 	color:#FFEB00;
-	font-family: 'Ubuntu','Times', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	text-decoration: none;
 }
 #heading{
@@ -30,6 +31,15 @@ table-layout: fixed;
     width: 300px;
   border-collapse: collapse;
 }
+.label{
+  text-align: right;
+
+}
+.input, .buttons{
+  text-align: left;
+ 
+}
+
 #menu div {
 	width: 33.3%;
 	float: left;
@@ -40,8 +50,10 @@ table-layout: fixed;
 background-color: black;
 }
 #middle{
-	vertical-align: center;
-	color: white;
+  margin:0 auto;
+    font-family: 'Ubuntu', sans-serif;
+
+	color: #D3D3D3;
     text-align: center;
 }
 
@@ -66,7 +78,7 @@ table{
   width: 100%;
 }
 
-.example-right {
+.quote{
   position:relative;
   padding:15px 30px;
   margin:10px 0px 0px 10px;
@@ -86,10 +98,10 @@ table{
 }
 
 /* display of quote author (alternatively use a class on the element following the blockquote) */
-.example-right + p {margin:30px 0 2em 85px; font-style:italic;}
+.quote + p {margin:30px 0 2em 85px; font-style:italic;}
 
 /* creates the triangle */
-.example-right:after {
+.quote:after {
   content:"";
   position:absolute;
   bottom:-20px;

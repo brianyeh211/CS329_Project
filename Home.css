@@ -1,6 +1,24 @@
 html{
 	background-color: #32373c;
 }
+.comment{
+  border-radius: 25px;
+    border: 2px solid #075698;
+    padding: 10px;
+    width: 90%; 
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    font-family: sans-serif;
+}
+.comment_title{
+  vertical-align: top;
+  margin: 0px;
+}
+.comment_preview{
+  font-size: smaller;
+}
 #logo{
 	color:#FFEB00;
 	font-family: 'Ubuntu','Times', sans-serif;
@@ -21,7 +39,7 @@ html{
 #menu{
 	width: 100%;
 	background-color: black;
-	color: white;
+	color: #D3D3D3;
     text-align: center;
 }
 #footer{
@@ -54,10 +72,12 @@ background-color: black;
 }
 #middle{
 	vertical-align: center;
-	color: black;
+	color: white;
     font-size: large;
     padding: 15px;
     padding-bottom: 400px;
+    background-color: #6B7279;  
+    font-family: sans-serif;
 }
 
 #container{
@@ -75,7 +95,7 @@ background-color: black;
 }
 
 
-.example-right {
+.quote{
   position:relative;
   padding:15px 30px;
   margin:10px 0px 0px 10px;
@@ -95,10 +115,10 @@ background-color: black;
 }
 
 /* display of quote author (alternatively use a class on the element following the blockquote) */
-.example-right + p {margin:15px 0px 2em 85px; font-style:italic;}
+.quote + p {margin:15px 0px 2em 85px; font-style:italic;}
 
 /* creates the triangle */
-.example-right:after {
+.quote:after {
   content:"";
   position:absolute;
   bottom:-20px;
