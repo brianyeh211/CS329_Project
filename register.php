@@ -23,6 +23,7 @@
 
 	if ($fh = fopen('passwd.txt', 'a')){
 		fwrite($fh, $combo.PHP_EOL);
+		$_SESSION['username'] = $username;
 		header('Location: Home.html');
 	}
 ?>
