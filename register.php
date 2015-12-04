@@ -3,7 +3,7 @@
 	$username = $_POST["username"];
 	$password = $_POST["password"];
 
-	$password = crypt($password);
+	//$password = crypt($password);
 
 	$combo = $username.":".$password;
 	
@@ -23,6 +23,6 @@
 
 	if ($fh = fopen('passwd.txt', 'a')){
 		fwrite($fh, $combo.PHP_EOL);
-		header('Location: index.html');
+		header('Location: Home.html');
 	}
 ?>
