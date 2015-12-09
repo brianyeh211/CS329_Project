@@ -63,19 +63,30 @@ $comment_title = $db_array[0][1];
 $comment_content = $db_array[0][2];
 
  print <<<Middle
-		<div id="middle">
+			<div id="middle">
+				<table align="" width="50%" border="0">
+	            <form name="login" method="post" action="./validation.php">
+	                <tr>
+	                    <td>Userr Name:</td>
+	                    <td><input id="username" type="text" name="username" onchange="callServer();" ></td>
+	                </tr>
+	                <tr>
+	                    <td>Password:</td>
+	                    <td><input id="password" type="text" name="password"></td>
+	                </tr>
+	                <tr>
+	                	<td><a href="register.html">Make New Account</a></td>
+	                </tr> 
+	                <tr>
+	                    <td>
+	                    <input type="submit" value="Login" >
+	                    <input type="eset" value="Reset" >
+	                    </td>
+	                </tr>
+	            </form>
+        	</table>
 
-			<div class="comment"> 
-				<p class="comment_title"> 
-					$comment_title
-				</p>
-				<p class="comment_preview">
-					$comment_content
-</p>
-			</div>
 			<br>
-			This website is for people to post rants/confessions anonymously. There will also be a comment feature and an upvote feature for every post. Users can sort posts by popularity or by time.
-			<!-- <p class="triangle-right">hello this is a block uote </p> -->
 		</div>
 
 Middle;

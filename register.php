@@ -69,6 +69,14 @@ function print_middle($db_array){
 	                    <td><input id="password" type="text" name="password"></td>
 	                </tr>
 	                <tr>
+	                    <td>Telephone:</td>
+	                    <td><input id="password" type="text" name="telephone"></td>
+	                </tr>
+	                <tr>
+	                    <td>Email:</td>
+	                    <td><input id="password" type="text" name="email"></td>
+	                </tr>
+	                <tr>
 	                    <td>
 	                    <input type="submit" value="Submit" >
 	                    <input type="reset" value="Reset" >
