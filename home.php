@@ -47,7 +47,7 @@ function print_header($css){
 $html_string = "";
 
  print <<<PAGE1
- <!DOCTYPE html> 
+<!DOCTYPE html> 
 <html>
 <head>
 	<title>The Down Low</title>
@@ -71,8 +71,9 @@ $comment_content = $db_array[0][2];
 				</p>
 				<p class="comment_preview">
 					$comment_content
-</p>
+				</p>
 			</div>
+
 			<br>
 			This website is for people to post rants/confessions anonymously. There will also be a comment feature and an upvote feature for every post. Users can sort posts by popularity or by time.
 			<!-- <p class="triangle-right">hello this is a block uote </p> -->
