@@ -42,9 +42,9 @@ $html_string = "";
         if (user == null){
             return;
         }
-        
+
         //CHANGE URL
-        var url = "http://zweb.cs.utexas.edu/users/cs329e-fa15/en3643/hwk14/getUser.php?user="+escape(user);
+        var url = "http://zweb.cs.utexas.edu/users/cs329e-fa15/brianyeh/CS329e_Proj/getUser.php?user="+escape(user);
 
         xhr.open("GET", url, true);
         xhr.onreadystatechange = updatePage;
@@ -81,8 +81,8 @@ function print_middle(){
 						<tbody>
 							<tr><td><br></td></tr>
 							<tr>
-								<td class='label'>Name: </td>
-								<td class='input'><input type="text" id="name"><br></td>
+								<td class='label'>UserName: </td>
+								<td class='input'><input type="text" id="name" onChange="callServer();"><br></td>
 							</tr>
 							<tr>
 								<td class='label'>Telephone: </td>
