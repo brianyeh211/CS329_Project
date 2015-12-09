@@ -44,8 +44,8 @@ $html_string = "";
         }
 
         //CHANGE URL
-        //var url = "http://zweb.cs.utexas.edu/users/cs329e-fa15/brianyeh/CS329e_Proj/getUser.php?user="+escape(user);
-        var url = "http://zweb.cs.utexas.edu/users/cs329e-fa15/en3643/Project_Phase_V/getUser.php?user="+escape(user);
+        var url = "http://zweb.cs.utexas.edu/users/cs329e-fa15/brianyeh/CS329e_Proj/getUser.php?user="+escape(user);
+        //var url = "http://zweb.cs.utexas.edu/users/cs329e-fa15/en3643/Project_Phase_V/getUser.php?user="+escape(user);
 
         xhr.open("GET", url, true);
         xhr.onreadystatechange = updatePage;
