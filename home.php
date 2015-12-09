@@ -1,8 +1,10 @@
-<?php
+<?php 
+if (isset($_COOKIES['username']) == false) {
+	header('Location: Login.html');
+}
+
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
-
-
 
 $host = "fall-2015.cs.utexas.edu";
 $user = "brianyeh";
@@ -18,8 +20,6 @@ print_header('./Home.css');
 readfile('./top.html');
 print_middle($db_array);
 readfile('./footer.html');
-
-
 
 
 function connect($connect){

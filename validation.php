@@ -11,6 +11,7 @@
 			$line = trim($line, "\n");
 			if ($combo == $line) {
 				$_SESSION['username'] = $username;
+				setcookie ('username', $combo, time()+120, '/', 'cs.utexas.edu', '0');
 				header('Location: Home.html');
 			}
 		}
