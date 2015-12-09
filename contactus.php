@@ -21,6 +21,47 @@ $html_string = "";
 	href = "$css"  />
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="ContactUs.js"></script>
+	
+	<script type = "text/javascript"> 
+
+    var xhr;
+    if (window.ActiveXObject)
+    {
+    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else if (window.XMLHttpRequest)
+    {
+    xhr = new XMLHttpRequest();
+    }
+
+    function callServer(){ 
+        var user = document.getElementById("username").value; 
+        if (user == ""){
+            return;
+        }
+        if (user == null){
+            return;
+        }
+        
+        //CHANGE URL
+        var url = "http://zweb.cs.utexas.edu/users/cs329e-fa15/en3643/hwk14/getUser.php?user="+escape(user);
+
+        xhr.open("GET", url, true);
+        xhr.onreadystatechange = updatePage;
+        xhr.send(null);
+    }
+
+    function updatePage(){
+        if((xhr.readyState == 4) && (xhr.status == 200)) {
+            var return_data = xhr.responseText;
+            if (return_data){
+                window.alert(return_data);
+            }
+        }
+    }
+
+    </script>   
+
 </head>
 
 PAGE1;
@@ -33,7 +74,7 @@ function print_middle(){
 
 			<div id="contact">
 
-				<form id="form1" class="form">
+				<form id="form1" class="form" action="">
 					<table border="0" style="width:50%">
 						<caption> Contact us <br> Please let us know if there are any problems on the site or if you have questions! <Us> </caption>
 						<br>
