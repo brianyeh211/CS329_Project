@@ -20,6 +20,7 @@ $html_string = "";
 	<link rel = "stylesheet" title = "basic style" type = "text/css" 
 	href = "$css"  />
 	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="ContactUs.js"></script>
 </head>
 
 PAGE1;
