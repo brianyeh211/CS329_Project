@@ -2,6 +2,14 @@ html{
 	background-color: #32373c;
 
 }
+/*body*/
+#container{
+  width: 90%;
+  margin: 10px auto;
+    max-width: 60em;
+    min-width: 60em;
+    background-color: #D3D3D3;
+}
 #logo{
 	color:#FFEB00;
 	font-family: 'Ubuntu', sans-serif;
@@ -50,17 +58,16 @@ table-layout: fixed;
 background-color: black;
 }
 #middle{
-  margin:0 auto;
-    font-family: 'Ubuntu', sans-serif;
 
-	color: #D3D3D3;
-    text-align: center;
+      vertical-align: center;
+  color: white;
+    font-size: large;
+    padding: 15px;
+    padding-bottom: 400px;
+    background-color: #6B7279;  
+    font-family: sans-serif;
 }
 
-#container{
-	width: 100%;
-	margin: 0;
-}
 .menu{
 		color:white;
     text-decoration: none;

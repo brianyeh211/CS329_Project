@@ -1,6 +1,67 @@
 html{
 	background-color: #32373c;
 }
+#container{
+  width: 90%;
+  margin: 10px auto;
+    max-width: 60em;
+    min-width: 60em;
+    background-color: #D3D3D3;
+}
+#header{
+  width:100%; 
+  background-color: #5C594C;
+  float: left;
+}
+#heading{
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-family: "rooney sans", sans-serif;
+  font-weight: bold;
+}
+#logo{
+  color:#FFEB00;
+  font-family: 'Ubuntu','Times', sans-serif;
+  text-decoration: none;
+}
+#menu{
+  width: 100%;
+  background-color: black;
+  color: #D3D3D3;
+    text-align: center;
+}
+#menu div {
+  width: 33.3%;
+  float: left;
+  background-color: black;
+}
+#menu div a {
+  float: left;
+background-color: black;
+}
+
+.menu{
+    color:white;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+table{
+    table-layout: fixed;
+    width: 300px;
+    border-collapse: collapse;
+
+}
+#middle{
+  vertical-align: center;
+  color: white;
+    font-size: large;
+    padding: 15px;
+    padding-bottom: 400px;
+    background-color: #6B7279;  
+    font-family: sans-serif;
+}
 .comment{
   border-radius: 25px;
     border: 2px solid #075698;
@@ -19,29 +80,8 @@ html{
 .comment_preview{
   font-size: smaller;
 }
-#logo{
-	color:#FFEB00;
-	font-family: 'Ubuntu','Times', sans-serif;
-	text-decoration: none;
-}
-#heading{
-	text-align: center;
-	color: white;
-	width: 100%;
-	font-family: "rooney sans", sans-serif;
-	font-weight: bold;
-}
-#header{
-	width:100%; 
-	background-color: #5C594C;
-	float: left;
-}
-#menu{
-	width: 100%;
-	background-color: black;
-	color: #D3D3D3;
-    text-align: center;
-}
+
+
 #footer{
   background-color: black;
   color: white;
@@ -50,49 +90,13 @@ html{
   text-align: center;
 }
 
-table{
-    table-layout: fixed;
-    width: 300px;
-    border-collapse: collapse;
 
-}
 
 #form{
     text-align: left;
 }
 
-#menu div {
-	width: 33.3%;
-	float: left;
-	background-color: black;
-}
-#menu div a {
-	float: left;
-background-color: black;
-}
-#middle{
-	vertical-align: center;
-	color: white;
-    font-size: large;
-    padding: 15px;
-    padding-bottom: 400px;
-    background-color: #6B7279;  
-    font-family: sans-serif;
-}
 
-#container{
-	width: 90%;
-	margin: 10px auto;
-    max-width: 60em;
-    min-width: 60em;
-    background-color: #D3D3D3;
-}
-.menu{
-		color:white;
-    text-decoration: none;
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-}
 
 
 .quote{
@@ -114,7 +118,7 @@ background-color: black;
   letter-spacing: 2px;
 }
 
-/* display of quote author (alternatively use a class on the element following the blockquote) */
+
 .quote + p {margin:15px 0px 2em 85px; font-style:italic;}
 
 /* creates the triangle */
