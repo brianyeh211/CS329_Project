@@ -12,7 +12,8 @@
 
 
     if (!tel.match("^[0-9]*$")){
-      alert("must be al lnumbers");
+      alert("Telephone must be all digits");
+      return; 
     }
 /* 
    if (username.length < 6 || username.length > 10) {
