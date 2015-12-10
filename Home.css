@@ -41,6 +41,10 @@ html{
 background-color: black;
 }
 
+.username{
+  color: #2497f4;
+}
+
 .menu{
     color:white;
     text-decoration: none;
