@@ -1,4 +1,7 @@
 <?php 
+if (isset($_COOKIES['username']) == false) {
+	header('Location: login.php');
+}
 
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
