@@ -51,11 +51,16 @@ background-color: black;
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
 }
+
+table a:hover {
+  background: white;
+  color: black;
+}
+
 table{
     table-layout: fixed;
     width: 300px;
     border-collapse: collapse;
-
 }
 #middle{
   vertical-align: center;
