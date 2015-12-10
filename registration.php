@@ -26,7 +26,7 @@
 	if ($fh = fopen('passwd.txt', 'a')){
 		fwrite($fh, $combo.PHP_EOL);
 		$_SESSION['username'] = $username;
-		setcookie ('username', $combo, time()+120, '/', 'cs.utexas.edu', '0');
+		setcookie ('username', $combo, time()+600, '/', 'cs.utexas.edu', '0');
 		header('Location: Home.html');
 	}
 ?>

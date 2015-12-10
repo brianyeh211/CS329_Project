@@ -13,7 +13,7 @@
 			$passwd = $array[0].":".$array[1];
 			if ($combo == $passwd) {
 				$_SESSION['username'] = $username;
-				setcookie ('username', $combo, time()+120, '/', 'cs.utexas.edu', '0');
+				setcookie ('username', $combo, time()+600, '/', 'cs.utexas.edu', '0');
 				header('Location: Home.html');
 			}
 		}
