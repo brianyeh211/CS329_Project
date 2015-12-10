@@ -1,7 +1,5 @@
 <?php 
-if (isset($_COOKIES['username']) == false) {
-	header('Location: Login.html');
-}
+
 
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
@@ -13,12 +11,39 @@ $dbs = "cs329e_brianyeh";
 $port = "3306";
 
 $connect = mysqli_connect ($host, $user, $pwd, $dbs, $port);
-$db_array = connect($connect);
 
+if (isset($_POST["title"])){
+$posted = "Thank You for you submission!";
+$today = date("Ymd");
+
+$today2 = substr($today, 0, 4) . "-" . $today[4] . $today[5] . "-" . substr($today, 6, 8); 
+
+#$user = $_COOKIE["username"];
+$user = "anony";
+
+$title = $_POST["title"];
+$comment = $_POST["comment"];
+
+	$stmt = mysqli_prepare ($connect, "INSERT INTO comments VALUES (?, ?, ?, ?)");
+	mysqli_stmt_bind_param ($stmt, 'ssss', $user, $title, $comment, $today2);
+	mysqli_stmt_execute($stmt);
+	mysqli_stmt_close($stmt);
+
+
+}else {
+
+$posted = "<br>Comment Title<br> 
+	<input type='text' name='title'></input><br><br> Comment<br>
+<textarea rows='8' cols='60' name ='comment'> </textarea><br>
+	<button onclick='calc()' id='send' style='margin-right: 10px;'>Submit</button>";
+
+}
+
+$db_array = connect($connect);
 #print header(css pages will differ), top (same for all pages), middle(diff for every page), footer(same for all)
 print_header('./Home.css');
 readfile('./top.html');
-print_middle($db_array);
+print_middle($db_array, $posted);
 readfile('./footer.html');
 
 
@@ -43,7 +68,6 @@ return $array_final;
 }
 
 function print_header($css){
- $script = $_SERVER['PHP_SELF'];
 $html_string = "";
 
  print <<<PAGE1
@@ -58,27 +82,25 @@ $html_string = "";
 
 PAGE1;
 }
-function print_middle($db_array){
-$comment_title = $db_array[0][1];
-$comment_content = $db_array[0][2];
 
+function print_middle($db_array, $posted){
+$html_string = "";
+
+ $script = $_SERVER['PHP_SELF'];
+
+foreach($db_array as $array){
+
+  $html_string .= "<div class='comment'> <p class='comment_title'>" . $array[1] . "<p class ='username'> by " . $array[0] . 
+ " on " . $array[3] . "</p><p class='comment_preview'>" . $array[2] . "</p> </div>"; 
+}
  print <<<Middle
 		<div id="middle">
+			$html_string
 
-			<div class="comment"> 
-				<p class="comment_title"> 
-					$comment_title
-				</p>
-				<p class="comment_preview">
-					$comment_content
-				</p>
-			</div>
-
-			<br>
-			This website is for people to post rants/confessions anonymously. There will also be a comment feature and an upvote feature for every post. Users can sort posts by popularity or by time.
-			<!-- <p class="triangle-right">hello this is a block uote </p> -->
+<form method="post" action="$script" id="form1" class="form">
+$posted
+					</form>
 		</div>
-
 Middle;
 }
 ?>
